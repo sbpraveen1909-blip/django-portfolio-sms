@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    <header class="hero">
+        <img class="profile-photo"
+             src="{% static 'images/profile.jpg.png' %}"
+             alt="My profile photo">
+
+        <h1>Hello, I am <span>PRAVEEN S B</span></h1>
+        <p>A Django developer and student.</p>
+
+        <a class="button" href="{% url 'student_list' %}">
+            Open Student Management System
+        </a>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Profile</h2>
+            <a class="github-button"
+                href="https://github.com/sbpraveen1909-blip"
+                target="_blank"
+                rel="noopener noreferrer">
+                 Visit My GitHub
+            </a>
+            <a class="linkedin-button"
+                href="https://www.linkedin.com/in/praveen-s-b-bb0a65384/"
+                target="_blank"
+                rel="noopener noreferrer">
+                 Visit My LinkedIn
+            </a>
+
+
+        </section>
+        <section class="card">
+            <h2>About Me</h2>
+            <p>
+                I am a student interested in web development. I build projects
+                using Python, Django, HTML, and CSS.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Projects</h2>
+
+            <div class="project">
+                <h3>Student Management System</h3>
+                <p>Add, edit, and manage student information using Django.</p>
+            </div>
+
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>A personal website to show my skills and projects.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

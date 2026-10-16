@@ -1,0 +1,192 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: #dbeafe;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #0b1120;
+}
+
+/* Top portfolio section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 520px;
+    padding: 65px 20px;
+    text-align: center;
+    background:
+        radial-gradient(circle at top left, #2563eb 0%, transparent 38%),
+        radial-gradient(circle at bottom right, #7c3aed 0%, transparent 35%),
+        linear-gradient(135deg, #0f172a, #172554);
+}
+
+.hero::before {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    content: "";
+    opacity: 0.25;
+    background: #38bdf8;
+    filter: blur(50px);
+}
+
+.hero > * {
+    position: relative;
+}
+
+.profile-photo {
+    width: 165px;
+    height: 165px;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.07) rotate(2deg);
+}
+
+h1 {
+    margin: 22px 0 8px;
+    color: white;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h1 span {
+    color: #fbbf24;
+}
+
+.hero p {
+    margin: 0 auto 25px;
+    color: #dbeafe;
+    font-size: 1.15rem;
+}
+
+/* Buttons */
+.button,
+.github-button,
+.linkedin-button {
+    display: inline-block;
+    margin: 8px 5px;
+    padding: 13px 22px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.button {
+    color: #172554;
+    background: #fbbf24;
+}
+
+.github-button {
+    background: #24292f;
+}
+
+.linkedin-button {
+    background: #0a66c2;
+}
+
+.button:hover,
+.github-button:hover,
+.linkedin-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Main content */
+.container {
+    width: min(1000px, 90%);
+    margin: -45px auto 50px;
+}
+
+.card {
+    margin-bottom: 25px;
+    padding: 32px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 18px;
+    background: rgba(30, 41, 59, 0.95);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #fbbf24;
+    font-size: 1.8rem;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+/* Project blocks */
+.project {
+    margin-top: 16px;
+    padding: 20px;
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    border-radius: 12px;
+    background: #172554;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.project:hover {
+    border-color: #fbbf24;
+    transform: translateX(8px);
+}
+
+.project h3 {
+    margin: 0 0 8px;
+    color: #93c5fd;
+}
+
+.project p {
+    margin: 0;
+}
+
+/* Mobile screen */
+@media (max-width: 600px) {
+    .hero {
+        min-height: auto;
+        padding: 45px 15px;
+    }
+
+    .profile-photo {
+        width: 135px;
+        height: 135px;
+    }
+
+    .container {
+        width: 92%;
+        margin-top: -25px;
+    }
+
+    .card {
+        padding: 23px;
+    }
+
+    .button,
+    .github-button,
+    .linkedin-button {
+        display: block;
+        margin: 10px auto;
+        width: min(290px, 100%);
+    }
+}
